@@ -9,20 +9,26 @@ import os
 
 path = '/Users/brunobrito/Desktop/Dev/notas fiscais'
 
-#ler arquivos de uma pasta
-def read_folder(path):
-    files = os.listdir(path)
-    return files
-
-#retornar endereco dos arquivos
-def get_path(path):
-    path_list = []
-    files = os.listdir(path)
-    for files in files:
-        a = os.path.join(path, files)
-        path_list.append(a)
+#class para leitura de arquivos
+class ReadFiles:
+    def __init__(self, path):
+        self.path = path
     
-    return path_list
-   
+    #leitura dos arquivos na pasta
+    def read_folder(self):
+        files = os.listdir(self.path)
+        return files
 
-print(get_path(path))
+    #retorna os endereços dos arquivos em formato de lista
+    def get_path(self):
+        path_list = []
+        files = os.listdir(self.path)
+        for files in files:
+            if files[-4:] == '.xml':
+                a = os.path.join(self.path, files)
+                path_list.append(a)
+        
+        return path_list
+    
+a = ReadFiles(path)
+print(a.get_path())
