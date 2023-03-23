@@ -1,4 +1,10 @@
-#ler arquivos de uma pasta 
+'''
+Data: 23/03/2023
+Autor: Bruno Brito
+
+Objetivo: Leitura de arquivos de uma pasta e retorno dos endereços dos arquivos em uma lista
+'''
+
 import os
 
 path = '/Users/brunobrito/Desktop/Dev/notas fiscais'
