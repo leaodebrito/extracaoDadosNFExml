@@ -7,10 +7,8 @@ Objetivo: Leitura de arquivos de uma pasta e retorno dos endereços dos arquivos
 
 import os
 
-path = '/Users/brunobrito/Desktop/Dev/notas fiscais'
-
 #class para leitura de arquivos
-class ReadFiles:
+class Read_Files:
     def __init__(self, path):
         self.path = path
     
@@ -30,5 +28,3 @@ class ReadFiles:
         
         return path_list
     
-a = ReadFiles(path)
-print(a.get_path())
