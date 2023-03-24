@@ -9,9 +9,10 @@ import pandas as pd
 import xmltodict
 
 class Read_export_xml_toExcel:
-    def __init__(self, path, excel_name):
+    def __init__(self, path, excel_name, exit_folder):
         self.path = path
         self.excel_name = excel_name
+        self.exit_folder = exit_folder
         
     #abertura de arquivo xml e conversao para dicionario
     def read_xml(self):
@@ -37,6 +38,5 @@ class Read_export_xml_toExcel:
             result.update(a)
         
         df = pd.DataFrame(result).T
-        df.to_excel(self.excel_name + '.xlsx')
-
+        df.to_excel(self.exit_folder + "/" + self.excel_name + '.xlsx')
 

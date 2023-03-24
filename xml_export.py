@@ -18,7 +18,7 @@ files_path = files.get_path()
 
 #leitura de cada um dos arquivos xml e exportacao para excel
 for i in files_path:
-    xml = rex.Read_export_xml_toExcel(i, i)
+    xml = rex.Read_export_xml_toExcel(i, i[-17:-4], path)
     dict_xml = xml.read_xml()
     xml.export_excel(dict_xml)
 
