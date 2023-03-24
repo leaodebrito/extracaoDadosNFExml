@@ -39,5 +39,5 @@ class Read_export_xml_toExcel:
         
         #exportacao para excel na pasta de leitura do xml
         df = pd.DataFrame(result).T
-        df.to_excel(self.exit_folder + "/" + self.excel_name + '.xlsx')
+        df.to_excel(self.excel_name + '.xlsx')
 
