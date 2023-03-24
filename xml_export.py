@@ -7,7 +7,7 @@ dos arquivos excel na pasta onde estão os arquivos xml originais
 '''
 
 import read_folder as rf
-import read_export_xml as rex
+import Read_export_xml_toExcel as rex
 
 #inserir pastas com os arquivos xml
 path = '/Users/brunobrito/Desktop/Dev/notas fiscais'
