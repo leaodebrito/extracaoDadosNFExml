@@ -17,4 +17,8 @@ Módulos utilizados
 2. xmltodict
 
 
+Possibilidades de expansão
+1. Automação de pasta para criação de arquivos excel
+2. Plataforma para conversão de dados
+
 Atualização: 23/03/2023
