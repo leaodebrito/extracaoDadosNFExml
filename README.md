@@ -21,5 +21,6 @@ Possibilidades de expansão
 1. Automação de pasta para criação de arquivos excel
 2. Plataforma para conversão de dados
 3. Extração de outras informações da nota fiscal
+4. 
 
 Atualização: 23/03/2023
