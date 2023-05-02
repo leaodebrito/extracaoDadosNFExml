@@ -10,10 +10,11 @@ import read_folder as rf
 import Read_export_xml_toExcel as rex
 
 #inserir pastas com os arquivos xml
-path = '/Users/brunobrito/Desktop/Notas'
+path = '/Users/brunobrito/Desktop/dev/xml'
 
 #leitura dos arquivos na pasta
 files = rf.Read_Files(path)
+print(files.read_folder())
 files_path = files.get_path()
 
 #leitura de cada um dos arquivos xml e exportacao para excel
