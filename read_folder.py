@@ -1,10 +1,11 @@
 '''
-Data: 23/03/2023
 Autor: Bruno Brito
+Data: 23/03/2023
 
 Objetivo: Leitura de arquivos de uma pasta e retorno dos endereços dos arquivos em uma lista
 '''
 
+# importando bibliotecas
 import os
 
 #class para leitura de arquivos

@@ -1,10 +1,11 @@
 '''
-Data: 23/03/2023
 Autor: Bruno Brito
+Data: 23/03/2023
 
 Objetivo: Leitura de arquivos xml e exportacao para excel
 '''
 
+# importando bibliotecas
 import pandas as pd
 import xmltodict
 
@@ -14,18 +15,18 @@ class Read_export_xml_toExcel:
         self.excel_name = excel_name
         self.exit_folder = exit_folder
         
-    #abertura de arquivo xml e conversao para dicionario
+    # abertura de arquivo xml e conversao para dicionario
     def read_xml(self):
         xml_file = open(self.path, 'r')
         xml_string = xml_file.read()
         dict_xml = xmltodict.parse(xml_string)
         return dict_xml
     
-    #quantidade de itens no xml
+    # contagem da quantidade de itens no xml
     def count_itens_xml(self, dict_xml):
         return len(dict_xml['nfeProc']['NFe']['infNFe']['det'])
     
-    #funcao para criar dicionarios a partir de itens de uma xml
+    # criaçao de dicionarios a partir de itens de uma xml
     def create_dict(self, dict_xml, item):
         return dict_xml['nfeProc']['NFe']['infNFe']['det'][item]['prod']
     
@@ -37,7 +38,7 @@ class Read_export_xml_toExcel:
             a = {chave:dicionario_do_item}
             result.update(a)
         
-        #exportacao para excel na pasta de leitura do xml
+        # exportacao para excel na pasta de leitura do xml
         df = pd.DataFrame(result).T
         df.to_excel(self.excel_name[:-4] + '.xlsx')
 
